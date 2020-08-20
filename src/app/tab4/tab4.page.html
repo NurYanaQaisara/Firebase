@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      LOGIN AS TRAINER
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form  #form="ngForm" (ngSubmit)="register(form)">
+      <div padding>
+        <ion-item>
+          <ion-input name="email" type="email" placeholder="Email" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+        </ion-item>
+
+        <ion-grid>
+          <ion-card href="tabs/tab6" class="login"> 
+              <ion-button type="submit" [disabled]="form.invalid" expand="block">LOGIN</ion-button>
+          </ion-card>
+        </ion-grid>
+      </div>>
+      </form>
+</ion-content>
