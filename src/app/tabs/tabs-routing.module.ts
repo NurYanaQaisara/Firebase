@@ -18,6 +18,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'sign-up',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../sign-up/sign-up.module').then(m => m.SignUpPageModule)
+          }
+        ]
+      },
+      {
+        path: 'login',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../login/login.module').then(m => m.LoginPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {

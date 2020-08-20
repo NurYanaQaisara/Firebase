@@ -17,10 +17,10 @@ export class LoginPage implements OnInit {
   }
 
   async loginUser(form):Promise<void>{
-    this.authService.loginUser(form.value.email, form.vale.password).
+    this.authService.loginUser(form.value.email, form.value.password).
     then(
       ()=>{
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('tabs/tab7');
       },
       async error => {
         const alert = await this.alertCtrl.create({
