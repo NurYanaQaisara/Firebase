@@ -17,10 +17,10 @@ export class SignUpPage implements OnInit {
   }
 
   async signUpUser(form):Promise<void>{
-    this.authService.signUpUser(form.value.email, form.vale.password).
+    this.authService.signUpUser(form.value.email, form.value.password).
     then(
       ()=>{
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('tabs/tab1');
       },
       async error => {
         const alert = await this.alertCtrl.create({
